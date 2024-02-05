@@ -1,0 +1,25 @@
+1. Migration for adding colums to the User model
+            avatar(image)
+            first_name(string)
+            last_name(string)
+            nickname(string)
+            language(array)
+            contributor(boolean)
+
+1.1 belongs_to and has_many associations
+1.2 validations
+
+2. Create Category model (migration)
+            name(string)
+
+3. Create Offer model (migration)
+            name(string)
+            phone(integer)
+            description(text)
+            website(text)
+            upvotes(integer)
+    categories refences
+
+
+
+      TO BE CONTINUED........
