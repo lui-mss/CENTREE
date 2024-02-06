@@ -1,2 +1,58 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cenTress - Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to cenTree</h1>
+        <p>Offering equality through information.</p>
+        <!-- Add more content here -->
+
+            <!-- Dropdown menu -->
+        <div class="country-dropdown">
+            <label for="country">Select country:</label>
+            <select id="country" name="country">
+                <option value="" selected disabled>Select country</option>
+                <option value="Germany">Germany</option>
+                <option value="Italy">Italy</option>
+                <option value="France">France</option>
+                <option value="Spain">Spain</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Greece">Greece</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Sweden">Sweden</option>
+            </select>
+        </div>
+    <!-- End of Dropdown menu -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 cenTree. All rights reserved. <a href="#">About Us</a></p>
+        </div>
+    </footer>
+
+    <!-- Interactive Map -->
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13); // Set initial map center and zoom level
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // You can add markers, popups, layers, etc. to the map here
+        // Example: L.marker([51.5, -0.09]).addTo(map)
+    </script>
+</body>
+</html>
