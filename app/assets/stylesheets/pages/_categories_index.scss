@@ -1,0 +1,29 @@
+.categories {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row-wrap;
+}
+
+.category {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  padding: 20px;
+  margin: 40px;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.fa-solid {
+  font-size: 30px;
+}

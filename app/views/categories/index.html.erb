@@ -1,11 +1,11 @@
 <h1>Categories index page</h1>
 
-<div class="city-dropdown">
+<div class="dropdown">Here dropdown to select city</div>
+<div class="categories">
+  <% @categories.each_with_index do |category, index| %>
+    <div class="category ">
+      <h4><%= category.name.upcase %></h4>
+      <p><%= @icons[index].html_safe %></p>
+    </div>
+  <% end %>
 </div>
-
-
-<div class="categories"></div>
-
-<% @categories.each do |category| %>
-  <li> <%= category.name %></li>
-<% end %>
