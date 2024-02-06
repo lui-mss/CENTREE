@@ -1,0 +1,11 @@
+<h1>Categories index page</h1>
+
+<div class="city-dropdown">
+</div>
+
+
+<div class="categories"></div>
+
+<% @categories.each do |category| %>
+  <li> <%= category.name %></li>
+<% end %>

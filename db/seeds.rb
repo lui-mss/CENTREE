@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+housing = Category.create!(name: "Housing")
+health_care = Category.create!(name: "Health Care")
+legal_counsel = Category.create!(name: "Legal Counsel")
+education = Category.create!(name: "Education")
+employment = Category.create!(name: "Employment")
