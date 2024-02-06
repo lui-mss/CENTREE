@@ -3,7 +3,7 @@
             first_name(string)
             last_name(string)
             nickname(string)
-            language(array)
+            language(text)
             contributor(boolean)
 
 1.1 belongs_to and has_many associations
