@@ -39,15 +39,15 @@ employment = Category.create!(name: "Employment")
 
 puts "Category seeds created"
 
-pedro_offer = Offer.create!(user: pedro, category: legal_counsel, name: "Pedro's Law Firm", phone: "999-999-9999", website: "pedro.com", description: )
-grazia_offer = Offer.create!(user: grazia, category: legal_counsel, name: "Grazia's Law Firm", phone: "888-888-8888", website: "grazia.com", description:)
-lucia_offer = Offer.create!(user: lucia, category: legal_counsel, name: "Pedro's Law Firm", phone: "777-777-7777", description:)
-dareos_offer = Offer.create!(user: dareos, category: legal_counsel, name: "Dareo's Law Firm", phone: "666-666-6666", description:)
-jess_offer = Offer.create!(user: jess, category: legal_counsel, name: "Jess's Law Firm", phone: "555-555-5555", description:)
-dari_offer = Offer.create!(user: dari, category: legal_counsel, name: "Dari's Law Firm", phone: "444-444-4444", description:)
-arbi_offer = Offer.create!(user: arbi, category: legal_counsel, name: "Arbi's Law Firm", phone: "333-333-3333",description:)
-alex_offer = Offer.create!(user: alex, category: legal_counsel, name: "Alex's Law Firm", phone: "222-222-2222", description:)
-andre_offer = Offer.create!(user: andre, category: legal_counsel, name: "Andre's Law Firm", phone: "111-111-1111", description:)
+# pedro_offer = Offer.create!(user: pedro, category: legal_counsel, name: "Pedro's Law Firm", phone: "999-999-9999", website: "pedro.com", description: )
+# grazia_offer = Offer.create!(user: grazia, category: legal_counsel, name: "Grazia's Law Firm", phone: "888-888-8888", website: "grazia.com", description:)
+# lucia_offer = Offer.create!(user: lucia, category: legal_counsel, name: "Pedro's Law Firm", phone: "777-777-7777", description:)
+# dareos_offer = Offer.create!(user: dareos, category: legal_counsel, name: "Dareo's Law Firm", phone: "666-666-6666", description:)
+# jess_offer = Offer.create!(user: jess, category: legal_counsel, name: "Jess's Law Firm", phone: "555-555-5555", description:)
+# dari_offer = Offer.create!(user: dari, category: legal_counsel, name: "Dari's Law Firm", phone: "444-444-4444", description:)
+# arbi_offer = Offer.create!(user: arbi, category: legal_counsel, name: "Arbi's Law Firm", phone: "333-333-3333",description:)
+# alex_offer = Offer.create!(user: alex, category: legal_counsel, name: "Alex's Law Firm", phone: "222-222-2222", description:)
+# andre_offer = Offer.create!(user: andre, category: legal_counsel, name: "Andre's Law Firm", phone: "111-111-1111", description:)
 
 
 # chatrooms are to be created by person who codes the chatroom stuff
