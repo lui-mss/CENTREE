@@ -1,45 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cenTress - Home</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
-</head>
-<body>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h1>Welcome to cenTree</h1>
-        <p>Offering equality through information.</p>
-        <!-- Add more content here -->
+<!-- Main Content -->
+<div class="container">
+    <h1>Welcome to cenTree</h1>
+    <p>Offering equality through information.</p>
+    <!-- Add more content here -->
 
-            <!-- Dropdown menu -->
-        <div class="country-dropdown">
-            <label for="country">Select country:</label>
-            <select id="country" name="country">
-                <option value="" selected disabled>Select country</option>
-                <option value="Germany">Germany</option>
-                <option value="Italy">Italy</option>
-                <option value="France">France</option>
-                <option value="Spain">Spain</option>
-                <option value="Portugal">Portugal</option>
-                <option value="Greece">Greece</option>
-                <option value="Netherlands">Netherlands</option>
-                <option value="Sweden">Sweden</option>
-            </select>
-        </div>
-    <!-- End of Dropdown menu -->
+        <!-- Dropdown menu -->
+    <div class="country-dropdown">
+        <label for="country">Select country:</label>
+        <select id="country" name="country">
+            <option value="" selected disabled>Select country</option>
+            <option value="Germany">Germany</option>
+            <option value="Italy">Italy</option>
+            <option value="France">France</option>
+            <option value="Spain">Spain</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Greece">Greece</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Sweden">Sweden</option>
+        </select>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 cenTree. All rights reserved. <a href="#">About Us</a></p>
-        </div>
-    </footer>
-</body>
-</html>
+    <div style="width: 100%; height: 600px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</div>
