@@ -1,4 +1,22 @@
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<h1><%= @category.name %><h1>
+<%# <%= @offers.category.find(38).name%>
+
+<div class="card-product-container mt-2">
+  <% @offers.each do |offer| %>
+    <div class="card-product">
+      <!-- Image -->
+      <%# <%= image_tag offer.user.avatar_url %>
+      <!-- Content -->
+      <div class="card-product-infos">
+        <!-- User's Offer Page -->
+        <h2><%= offer.name %></h2>
+        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+        <p><strong>Website:</strong> <%= offer.website %></p>
+        <p><strong>Phone number:</strong> <%= offer.phone %></p>
+        <p><strong>What do we provide?</strong> <%= offer.description %></p>
+        <p><strong>People that trusted us: </strong> <%= offer.upvotes %></p>
+
+      </div>
+    </div>
+  <% end %>
+</div>
