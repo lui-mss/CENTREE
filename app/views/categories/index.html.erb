@@ -1,25 +1,23 @@
 <h1>Categories index page</h1>
 
-<div class="dropdown">
-  <%# <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-    Select city
-  </a>
-
-  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">City 1</a></li>
-    <li><a class="dropdown-item" href="#">City 2</a></li>
-    <li><a class="dropdown-item" href="#">City 3</a></li>
-  </ul> %>
-
-  <select class="form-select" aria-label="Default select example">
-      <option selected>Select city</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-</select>
-</div>
-
-
+  <div class="container">
+    <div class="row justify-content-center">
+      <%= form_with url: categories_path(country: params[:country]), method: :get do %>
+        <div class="city-dropdown search-inputs d-flex">
+          <%= hidden_field_tag :country, params[:country] %>
+              <select id="city" name="city" class="form-select">
+                  <option value="" selected disabled>Select city</option>
+                  <% @cities.each do |city| %>
+                  <option value="<%= city %>"><%= city %></option>
+                  <% end %>
+              </select>
+              <%= button_tag(type: 'submit', class: 'btn btn-outline-success', style: "margin-left: 15px;") do %>
+                <span><i class="fas fa-search"></i></span> Search
+              <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
 <div class="categories">
   <% @categories.each_with_index do |category, index| %>
