@@ -1,6 +1,9 @@
 class Offer < ApplicationRecord
   belongs_to :category
   belongs_to :user
+
+  geocoded_by :city
+  after_validation :geocode, if: ->(obj) { obj.city.present? && obj.city_changed? }
   has_one_attached :photo
 
   validates :name, presence: true

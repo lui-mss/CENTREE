@@ -1,2 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<!-- Main Content -->
+<div class="container">
+    <h1>Welcome to cenTree</h1>
+    <p>Offering equality through information.</p>
+    <!-- Add more content here -->
+
+        <!-- Dropdown menu -->
+    <div class="country-dropdown">
+        <label for="country">Select country:</label>
+        <select id="country" name="country">
+            <option value="" selected disabled>Select country</option>
+            <option value="Germany">Germany</option>
+            <option value="Italy">Italy</option>
+            <option value="France">France</option>
+            <option value="Spain">Spain</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Greece">Greece</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Sweden">Sweden</option>
+        </select>
+    </div>
+
+    <div style="width: 100%; height: 600px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</div>
