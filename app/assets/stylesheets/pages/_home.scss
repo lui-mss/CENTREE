@@ -1,1 +1,52 @@
 // Specific CSS for your home-page
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+  display: none;
+}
+
+.profile-picture img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.burger-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+  background-color: white;
+  color: #333;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
