@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_06_155048) do
 
   create_table "offers", force: :cascade do |t|
     t.string "name"
-    t.integer "phone"
+    t.string "phone"
     t.text "description"
     t.text "website"
     t.integer "upvotes"
