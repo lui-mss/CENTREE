@@ -5,7 +5,7 @@
   <% @offers.each do |offer| %>
     <div class="card-product">
       <!-- Image -->
-    
+
       <!-- Content -->
       <div class="card-product-infos">
         <!-- User's Offer Page -->
@@ -13,7 +13,7 @@
         <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
         <p><strong>People that trusted us:</strong></p>
         <p class="upvotes"><%= offer.upvotes %></p>
-        <%= link_to "More Information", category_offer_path(@category, offer), class: "btn btn-ghost card_button" %>
+        <%= link_to "More Information", offer_path(offer), class: "btn btn-ghost card_button" %>
       </div>
     </div>
   <% end %>
