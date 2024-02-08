@@ -9,7 +9,7 @@
       <p><strong>Phone number:</strong> <%= @offer.phone %></p>
       <p><strong>What do we provide?</strong> <%= @offer.description %></p>
       <p><strong>People that trusted us: </strong> <%= @offer.upvotes %></p>
-     <%= link_to "Contact us", "", class: "btn btn-ghost card_button" %>
+     <%= button_to "Contact us", offer_chatrooms_path(@offer), class: "btn btn-ghost card_button", method: "post" %>
     </div>
   </div>
 </div>
