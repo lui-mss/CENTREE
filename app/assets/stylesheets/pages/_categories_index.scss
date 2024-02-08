@@ -1,33 +1,70 @@
-.categories {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row-wrap;
-}
-
-.category {
-  display: flex;
-  flex-flow: column;
-  text-align: center;
-  justify-content: center;
-  width: 100%;
-  height: 200px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  margin: 40px;
 }
 
-.dropdown {
-  display: flex;
-  justify-content: center;
-  margin: 40px;
+/* Header styles */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.fa-solid {
-  font-size: 30px;
+/* Dropdown menu styles */
+.city-dropdown {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .form-select {
-  width: 75%;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn-outline-success {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #218838;
+}
+
+/* Categories container */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Individual category styles */
+.category {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.category p {
+  font-size: 1rem;
+  color: #666;
 }

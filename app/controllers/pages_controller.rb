@@ -3,6 +3,14 @@ class PagesController < ApplicationController
 
   def home
     @offers = Offer.all
+    @categories = Category.all
+    @icons = [
+      "<i class=\"fa-solid fa-person-shelter\"></i>",
+      "<i class=\"fa-solid fa-hospital\"></i>",
+      "<i class=\"fa-solid fa-scale-balanced\"></i>",
+      "<i class=\"fa-solid fa-graduation-cap\"></i>",
+      "<i class=\"fa-solid fa-briefcase\"></i>"
+    ]
     # The `geocoded` scope filters only flats with coordinates
     @markers = @offers.geocoded.map do |offer|
       {
