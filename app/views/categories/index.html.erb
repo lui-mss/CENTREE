@@ -1,4 +1,6 @@
 <h1>Resources</h1>
+<%= params[:city]  %>
+<%# display city and shit %>
 
   <div class="container">
     <div class="row justify-content-center">
@@ -21,11 +23,13 @@
     </div>
   </div>
 
-<div class="categories">
-  <% @categories.each_with_index do |category, index| %>
-    <div class="category" >
-      <h4><%= category.name.upcase %></h4>
-      <p><%= @icons[index].html_safe %></p>
-    </div>
-  <% end %>
-</div>
+  <div class="categories">
+    <% @categories.each_with_index do |category, index| %>
+      <div class="category clickable" >
+        <%= link_to offers_path(category_id: category.id, country: params[:country], city: params[:city]), class:"link-style" do %>
+          <h4><%= category.name.upcase %></h4>
+          <p><%= @icons[index].html_safe %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>

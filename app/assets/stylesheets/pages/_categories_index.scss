@@ -10,6 +10,14 @@ h1 {
   color: #333;
   margin-bottom: 20px;
   text-align: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  padding: 20px;
+  margin: 40px;
 }
 
 /* Dropdown menu styles */
@@ -67,4 +75,16 @@ h1 {
 .category p {
   font-size: 1rem;
   color: #666;
+}
+
+.clickable link {
+  cursor: pointer;
+}
+
+.city-dropdown {
+  padding-top: 50px;
+}
+
+.link-style {
+  text-decoration: none;
 }

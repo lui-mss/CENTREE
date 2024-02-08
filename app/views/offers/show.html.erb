@@ -1,0 +1,15 @@
+<div class="show-card-container">
+  <div class="show-card">
+          <!-- Content -->
+    <div class="show-card-infos">
+      <h1><%= @offer.name %><h1>
+      <!-- User's Offer Page -->
+      <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+      <p><strong>Website:</strong> <%= @offer.website %></p>
+      <p><strong>Phone number:</strong> <%= @offer.phone %></p>
+      <p><strong>What do we provide?</strong> <%= @offer.description %></p>
+      <p><strong>People that trusted us: </strong> <%= @offer.upvotes %></p>
+     <%= link_to "Contact us", "", class: "btn btn-ghost card_button" %>
+    </div>
+  </div>
+</div>
