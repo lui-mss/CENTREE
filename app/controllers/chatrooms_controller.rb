@@ -1,4 +1,5 @@
 class ChatroomsController < ApplicationController
+
   def index
     if current_user.contributor
       @chatrooms = current_user.chatrooms_as_contributor
