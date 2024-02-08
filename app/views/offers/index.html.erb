@@ -1,20 +1,22 @@
-<h1><%= @category.name %><h1>
+<div class="container">
+  <h1><%= @category.name %><h1>
 <%# <%= @offers.category.find(38).name%>
 
-<div class="card-product-container flex-container ">
-  <% @offers.each do |offer| %>
-    <div class="card-product">
-      <!-- Image -->
+  <div class="card-product-container flex-container ">
+    <% @offers.each do |offer| %>
+      <div class="card-product">
+        <!-- Image -->
 
-      <!-- Content -->
-      <div class="card-product-infos">
-        <!-- User's Offer Page -->
-        <h2><%= offer.name %></h2>
-        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-        <p><strong>People that trusted us:</strong></p>
-        <p class="upvotes"><%= offer.upvotes %></p>
-        <%= link_to "More Information", offer_path(offer), class: "btn-outline-success btn-outline-success card_button" %>
+        <!-- Content -->
+        <div class="card-product-infos">
+          <!-- User's Offer Page -->
+          <h2><%= offer.name %></h2>
+          <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+          <p><strong>People that trusted us:</strong></p>
+          <p class="upvotes"><%= offer.upvotes %></p>
+          <%= link_to "More Information", offer_path(offer), class: "btn-outline-success btn-outline-success card_button" %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
