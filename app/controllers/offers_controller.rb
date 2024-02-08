@@ -1,4 +1,5 @@
 class OffersController < ApplicationController
+  before_action :set_offer, only: [:show]
 
   def index
     @category = Category.find(params[:category_id])
@@ -8,5 +9,14 @@ class OffersController < ApplicationController
     else
       @offers = Offer.all
     end
+  end
+
+  def show
+  end
+
+  private
+
+  def set_offer
+    @offer = Offer.find(params[:id])
   end
 end

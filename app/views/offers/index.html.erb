@@ -1,21 +1,19 @@
 <h1><%= @category.name %><h1>
 <%# <%= @offers.category.find(38).name%>
 
-<div class="card-product-container mt-2">
+<div class="card-product-container flex-container ">
   <% @offers.each do |offer| %>
     <div class="card-product">
       <!-- Image -->
-      <%# <%= image_tag offer.user.avatar_url %>
+    
       <!-- Content -->
       <div class="card-product-infos">
         <!-- User's Offer Page -->
         <h2><%= offer.name %></h2>
         <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-        <p><strong>Website:</strong> <%= offer.website %></p>
-        <p><strong>Phone number:</strong> <%= offer.phone %></p>
-        <p><strong>What do we provide?</strong> <%= offer.description %></p>
-        <p><strong>People that trusted us: </strong> <%= offer.upvotes %></p>
-
+        <p><strong>People that trusted us:</strong></p>
+        <p class="upvotes"><%= offer.upvotes %></p>
+        <%= link_to "More Information", category_offer_path(@category, offer), class: "btn btn-ghost card_button" %>
       </div>
     </div>
   <% end %>
