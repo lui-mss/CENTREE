@@ -34,7 +34,7 @@ andre = User.create!(email: "andre@jail.com", password: 654321, nickname: "Andre
 puts "Lawyer Users seeds created"
 
 housing = Category.create!(name: "Housing")
-health_care = Category.create!(name: "Health Care")
+health_care = Category.create!(name: "Healthcare")
 legal_counsel = Category.create!(name: "Legal Counsel")
 education = Category.create!(name: "Education")
 employment = Category.create!(name: "Employment")
