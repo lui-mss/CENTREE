@@ -12,5 +12,11 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :categories, only: [:index, :show]
-  resources :offers, only: [:index, :show]
+  resources :offers, only: [:index, :show] do
+    resources :chatrooms, only: [:create]
+  end
+
+  resources :chatrooms, only: [:index, :show] do
+    resources :messages, only: [:create]
+  end
 end
