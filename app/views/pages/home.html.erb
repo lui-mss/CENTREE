@@ -1,12 +1,18 @@
-<div class="container">
-    <p>Offering equality through information and resources.</p>
+<div class="container-fluid">
+
+  <div class="image-container">
+    <%= image_tag("migration4.png") %>
+    <h1 class="image-caption">Offering equality through information and resources.</h1>
+  </div>
 
   <div class="categories">
     <% @categories.each_with_index do |category, index| %>
-      <div class="category" >
-        <h4><%= category.name.upcase %></h4>
-        <p><%= @icons[index].html_safe %></p>
-      </div>
+      <a href="<%= offers_path(category_id: category.id) %>"class="link-style">
+        <div class="category">
+          <h4><%= category.name.upcase %></h4>
+          <p><%= @icons[index].html_safe %></p>
+        </div>
+      </a>
     <% end %>
   </div>
 
