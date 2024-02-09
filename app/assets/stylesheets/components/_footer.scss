@@ -5,14 +5,20 @@
   align-items: baseline; /*without this the icons are not aligned correctly */
   width: 100%;
   height: 60px; /* Adjust height as needed */
-  background-color: #333; /* Footer background color */
+  background-color: #F4F4F4; /* Footer background color */
   // background-image: url(logo.png);
   // background-size: 75%;
   // background-position: center top, center center, center bottom;
   // background-repeat: no-repeat, repeat-y, no-repeat;
-  color: whitesmoke; /* Text color */
+  color: #333; /* Text color */
   text-align: center;
   line-height: 60px; /* Vertical centering */
+}
+
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .copyright {
@@ -37,7 +43,7 @@
 
 a {
   text-decoration: none;
-  color: whitesmoke;
+  color: #333;
   margin-left: 4px;
   margin-right: 4px;
 }
