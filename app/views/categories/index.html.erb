@@ -1,22 +1,25 @@
+<h1>Resources</h1>
 <%= params[:city]  %>
 <%# display city and shit %>
 
   <div class="container">
     <div class="row justify-content-center">
-      <%= form_with url: categories_path(country: params[:country]), method: :get do %>
-        <div class="city-dropdown search-inputs d-flex">
-          <%= hidden_field_tag :country, params[:country] %>
-              <select id="city" name="city" class="form-select">
-                  <option value="" selected disabled>Select city</option>
-                  <% @cities.each do |city| %>
-                  <option value="<%= city %>"><%= city %></option>
-                  <% end %>
-              </select>
-              <%= button_tag(type: 'submit', class: 'btn btn-outline-success', style: "margin-left: 15px;") do %>
-                <span><i class="fas fa-search"></i></span> Search
-              <% end %>
-        </div>
-      <% end %>
+      <div class="col-md-6">
+        <%= form_with url: categories_path(country: params[:country]), method: :get do %>
+          <div class="city-dropdown search-inputs d-flex">
+            <%= hidden_field_tag :country, params[:country] %>
+                <select id="city" name="city" class="form-select">
+                    <option value="" selected disabled>Select city</option>
+                    <% @cities.each do |city| %>
+                    <option value="<%= city %>"><%= city %></option>
+                    <% end %>
+                </select>
+                <%= button_tag(type: 'submit', class: 'btn btn-outline-success', style: "margin-left: 15px;") do %>
+                  <span><i class="fas fa-search"></i></span>
+                <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 
