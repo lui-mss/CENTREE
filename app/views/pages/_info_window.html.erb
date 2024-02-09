@@ -1,8 +1,8 @@
 <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-<h4><strong>Name:</strong> <%= offer.user.first_name %></h4>
+<h6><strong><%= offer.name %></strong></h6>
 <p><strong>City:</strong> <%= offer.city %></p>
 <p><strong>Website:</strong> <%= offer.website %></p>
 <p><strong>Phone number:</strong> <%= offer.phone %></p>
 <p><strong>What do we provide?</strong> <%= offer.description %></p>
 <p><strong>People that trusted us: </strong> <%= offer.upvotes %></p>
-<%= link_to "Contact us",  offer_chatrooms_path(offer), data: { turbo_method: :post}, class: "btn btn-ghost card_button" %>
+<%= link_to "Message us",  offer_chatrooms_path(offer), data: { turbo_method: :post}, class: "btn btn-outline-success" %>
