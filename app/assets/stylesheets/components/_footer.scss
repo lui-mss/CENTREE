@@ -1,0 +1,48 @@
+// * Define footer styles */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /*without this the icons are not aligned correctly */
+  width: 100%;
+  height: 60px; /* Adjust height as needed */
+  background-color: #333; /* Footer background color */
+  // background-image: url(logo.png);
+  // background-size: 75%;
+  // background-position: center top, center center, center bottom;
+  // background-repeat: no-repeat, repeat-y, no-repeat;
+  color: whitesmoke; /* Text color */
+  text-align: center;
+  line-height: 60px; /* Vertical centering */
+}
+
+.copyright {
+  margin-left: 30px;
+}
+
+.fake-links {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.footer-icons {
+  display: flex;
+  align-content: center;
+  margin-right: 30px;
+}
+
+.footer p {
+  font-size: 0.9em;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+i {
+  margin-left: 4px;
+  margin-right: 4px;
+}
