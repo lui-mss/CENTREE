@@ -1,4 +1,11 @@
-<h1>My messages</h1>
-<ul>
-  <li></li>
-</ul>
+<h1>My Messages</h1>
+
+  <div class="chatroom-index-container border border-dark ms-4">
+      <ul> <strong>My chatrooms</strong>
+        <%  @chatrooms.each do |chatroom| %>
+        <li>
+          <%= link_to chatroom.contributor.offers.first.name, chatroom_path(chatroom) %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
