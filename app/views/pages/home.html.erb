@@ -32,7 +32,7 @@
 
   <div class="categories mb-4">
       <% @categories.each_with_index do |category, index| %>
-        <a href="<%= root_path(category_id: category.id) %>"class="link-style">
+        <a href="<%= root_path(category_id: category.id, anchor: "after-refresh-map") %>"class="link-style">
           <div class="category">
             <h4><%= category.name.upcase %></h4>
             <p><%= @icons[index].html_safe %></p>
@@ -41,7 +41,7 @@
       <% end %>
     </div>
 
-  <div class="map" style="width: 100%; height: 600px;"
+  <div id="after-refresh-map" class="map" style="width: 100%; height: 600px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
