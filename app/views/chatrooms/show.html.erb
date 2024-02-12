@@ -3,7 +3,7 @@
       <ul> <strong>My chatrooms</strong>
         <%  @chatrooms.each do |chatroom| %>
         <li>
-          <%= link_to chatroom.contributor.nickname, chatroom_path(chatroom) %>
+          <%= link_to chatroom.contributor.offers.first.name, chatroom_path(chatroom) %>
         </li>
         <% end %>
       </ul>
@@ -11,7 +11,7 @@
 
   <div class="container chatroom">
     <div class="chatroom-name-container">
-      <h3><%= @chatroom.contributor.nickname %></h3>
+      <h3><%= @chatroom.contributor.offers.first.name %></h3>
     </div>
 
     <div class="messages">
@@ -32,7 +32,7 @@
       %>
         <%= f.input :content,
           label: false,
-          placeholder: "Message #{@chatroom.contributor.nickname}",
+          placeholder: "Message #{@chatroom.contributor.offers.first.name}",
           wrapper_html: {class: "flex-grow-1"}
         %>
         <%= f.submit "Send", class: "btn-outline-success btn-outline-success mb-3" %>

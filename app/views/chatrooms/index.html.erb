@@ -4,7 +4,7 @@
       <ul> <strong>My chatrooms</strong>
         <%  @chatrooms.each do |chatroom| %>
         <li>
-          <%= link_to chatroom.contributor.nickname, chatroom_path(chatroom) %>
+          <%= link_to chatroom.contributor.offers.first.name, chatroom_path(chatroom) %>
         </li>
         <% end %>
       </ul>
