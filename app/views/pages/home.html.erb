@@ -5,24 +5,13 @@
     <h3 class="image-caption">Offering equality through information.</h3>
   </div>
 
-  <div class="categories">
-    <% @categories.each_with_index do |category, index| %>
-      <a href="<%= offers_path(category_id: category.id) %>"class="link-style">
-        <div class="category">
-          <h4><%= category.name.upcase %></h4>
-          <p><%= @icons[index].html_safe %></p>
-        </div>
-      </a>
-    <% end %>
-  </div>
-
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-6">
               <%= form_with url: categories_path, method: :get do %>
                   <div class="country-dropdown search-inputs d-flex">
                       <select id="country" name="country" class="form-select">
-                          <option value="" selected disabled>Select country</option>
+                          <option value="" selected disabled>Select destination</option>
                           <option value="Germany">Germany</option>
                           <option value="Italy">Italy</option>
                           <option value="France">France</option>
@@ -40,6 +29,17 @@
           </div>
       </div>
   </div>
+
+  <div class="categories mb-4">
+      <% @categories.each_with_index do |category, index| %>
+        <a href="<%= root_path(category_id: category.id) %>"class="link-style">
+          <div class="category">
+            <h4><%= category.name.upcase %></h4>
+            <p><%= @icons[index].html_safe %></p>
+          </div>
+        </a>
+      <% end %>
+    </div>
 
   <div class="map" style="width: 100%; height: 600px;"
     data-controller="map"

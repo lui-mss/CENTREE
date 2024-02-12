@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-    @offers = Offer.all
+    @offers = set_offers(params)
     @categories = Category.all
     @icons = [
       "<i class=\"fa-solid fa-person-shelter\"></i>",
@@ -19,6 +19,16 @@ class PagesController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: {offer: offer}),
         marker_html: render_to_string(partial: "marker")
       }
+    end
+  end
+
+  private
+
+  def set_offers(params)
+    if params[:category_id].nil?
+      Offer.all
+    else
+      Offer.where(category_id: params[:category_id])
     end
   end
 end
