@@ -21,7 +21,7 @@ stamatis = User.create!(email: "stamatis@jail.com", password: 654321, nickname: 
 
 puts "Migrant Users seeds created"
 
-pedro = User.create!(email: "pedro@jail.com", password: 654321, nickname: "Pedro", first_name: "pedro_bm", last_name: "BM", language: "portuguese, english", contributor: true)
+pedro = User.create!(email: "pedro@jail.com", password: 654321, nickname: "pedro_bm", first_name: "Pedro", last_name: "BM", language: "portuguese, english", contributor: true)
 grazia = User.create!(email: "grazia@jail.com", password: 654321, nickname: "grazia_c", first_name: "Grazia", last_name: "C", language: "italian, english", contributor: true)
 lucia = User.create!(email: "lucia@jail.com", password: 654321, nickname: "lucia_h", first_name: "Lucia", last_name: "H", language: "spanish, english",  contributor: true)
 dareos = User.create!(email: "dareos@jail.com", password: 654321, nickname: "dareos_h", first_name: "Dareos", last_name: "H", language: "greek, english", contributor: true)
@@ -38,6 +38,7 @@ health_care = Category.create!(name: "Healthcare")
 legal_counsel = Category.create!(name: "Legal Counsel")
 education = Category.create!(name: "Education")
 employment = Category.create!(name: "Employment")
+all_categories = Category.all
 
 puts "Category seeds created"
 
