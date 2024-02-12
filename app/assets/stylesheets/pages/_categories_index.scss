@@ -53,6 +53,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 /* Individual category styles */
@@ -89,5 +90,5 @@ h1 {
 
 .selected-city {
   display: flex;
-  
+
 }
