@@ -21,4 +21,5 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
   end
 
+  resources :e_storages
 end

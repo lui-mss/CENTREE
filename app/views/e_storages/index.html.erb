@@ -1,0 +1,12 @@
+<h1>e-Storage</h1>
+<ul>
+  <% @e_storages.each do |e_storage| %>
+    <li>
+      <%= link_to e_storage.name, e_storage %>
+      (<%= link_to 'Edit', edit_e_storage_path(e_storage) %>)
+      (<%= link_to 'Delete', e_storage, method: :delete, data: { confirm: 'Are you sure?' } %>)
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Upload New File', new_e_storage_path, class: 'btn btn-primary' %>

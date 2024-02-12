@@ -1,0 +1,6 @@
+<%= simple_form_for(@e_storage) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :files, as: :file, input_html: { multiple: true } %>
+  <%= f.button :submit, "Create" %>
+<% end %>
