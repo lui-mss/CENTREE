@@ -21,15 +21,15 @@ stamatis = User.create!(email: "stamatis@jail.com", password: 654321, nickname: 
 
 puts "Migrant Users seeds created"
 
-pedro = User.create!(email: "pedro@jail.com", password: 654321, nickname: "Global Gateway Legal Group", first_name: "Pedro", last_name: "BM", language: "portuguese, english", contributor: true)
-grazia = User.create!(email: "grazia@jail.com", password: 654321, nickname: "Pathfinder Immigration Law", first_name: "Grazia", last_name: "C", language: "italian, english", contributor: true)
-lucia = User.create!(email: "lucia@jail.com", password: 654321, nickname: "CrossBorders Law Associates", first_name: "Lucia", last_name: "H", language: "spanish, english",  contributor: true)
-dareos = User.create!(email: "dareos@jail.com", password: 654321, nickname: "Horizon Immigration Partners", first_name: "Dareos", last_name: "H", language: "greek, english", contributor: true)
-jess = User.create!(email: "jess@jail.com", password: 654321, nickname: "Passport Partners Immigration", first_name: "Jess", last_name: "SC", language: "portuguese, english", contributor: true)
-dari = User.create!(email: "dari@jail.com", password: 654321, nickname: "Unity Immigration Law Advisors", first_name: "Dari", last_name: "G", language: "english", contributor: true)
-arbi = User.create!(email: "arbi@jail.com", password: 654321, nickname: "BridgeView Immigration Law Firm", first_name: "Arbi", last_name: "V", language: "italian, english", contributor: true)
-alex = User.create!(email: "alex@jail.com", password: 654321, nickname: "Pinnacle Immigration Legal Services", first_name: "Alex", last_name: "D", language: "english", contributor: true)
-andre = User.create!(email: "andre@jail.com", password: 654321, nickname: "NewLeaf Immigration Law Offices", first_name: "Andre", last_name: "M", language: "portuguese, english", contributor: true)
+pedro = User.create!(email: "pedro@jail.com", password: 654321, nickname: "pedro_bm", first_name: "Pedro", last_name: "BM", language: "portuguese, english", contributor: true)
+grazia = User.create!(email: "grazia@jail.com", password: 654321, nickname: "grazia_c", first_name: "Grazia", last_name: "C", language: "italian, english", contributor: true)
+lucia = User.create!(email: "lucia@jail.com", password: 654321, nickname: "lucia_h", first_name: "Lucia", last_name: "H", language: "spanish, english",  contributor: true)
+dareos = User.create!(email: "dareos@jail.com", password: 654321, nickname: "dareos_h", first_name: "Dareos", last_name: "H", language: "greek, english", contributor: true)
+jess = User.create!(email: "jess@jail.com", password: 654321, nickname: "jess_sc", first_name: "Jess", last_name: "SC", language: "portuguese, english", contributor: true)
+dari = User.create!(email: "dari@jail.com", password: 654321, nickname: "dari_g", first_name: "Dari", last_name: "G", language: "english", contributor: true)
+arbi = User.create!(email: "arbi@jail.com", password: 654321, nickname: "arbi_v", first_name: "Arbi", last_name: "V", language: "italian, english", contributor: true)
+alex = User.create!(email: "alex@jail.com", password: 654321, nickname: "alex_d", first_name: "Alex", last_name: "D", language: "english", contributor: true)
+andre = User.create!(email: "andre@jail.com", password: 654321, nickname: "andre_m", first_name: "Andre", last_name: "M", language: "portuguese, english", contributor: true)
 
 puts "Lawyer Users seeds created"
 
@@ -38,6 +38,7 @@ health_care = Category.create!(name: "Healthcare")
 legal_counsel = Category.create!(name: "Legal Counsel")
 education = Category.create!(name: "Education")
 employment = Category.create!(name: "Employment")
+all_categories = Category.all
 
 puts "Category seeds created"
 
