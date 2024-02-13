@@ -1,7 +1,7 @@
 <div class="container">
-  <h1><%= @category.name %><h1>
-<%# <%= @offers.category.find(38).name%>
+  <%= link_to "Back to Categories", categories_path(country: params[:country]) %>
 
+  <h1><%= @category.name %><h1>
   <div class="card-product-container flex-container">
     <% @offers.each do |offer| %>
       <div class="card-product">
@@ -14,7 +14,7 @@
           <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
           <p><strong>People that trusted us:</strong></p>
           <p class="upvotes"><%= offer.upvotes %></p>
-          <%= link_to "More Information", offer_path(offer), class: "btn btn-outline-success card_button" %>
+          <%= link_to "More Information", offer_path(offer, country: params[:country], city: params[:city]), class: "btn-outline-success btn-outline-success card_button" %>
         </div>
       </div>
     <% end %>
