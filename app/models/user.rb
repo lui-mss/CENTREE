@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :chatrooms_as_contributor, class_name: "Chatroom", foreign_key: :contributor_id
   has_many :messages
   has_many :offers
-  has_many :e_storages
+  has_many :e_storages, dependent: :destroy
   has_one_attached :photo
 end
