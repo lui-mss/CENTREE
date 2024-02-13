@@ -5,12 +5,12 @@
     <div class="show-card-infos">
       <h1><%= @offer.name %><h1>
       <!-- User's Offer Page -->
-      <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+      <%= cl_image_tag @offer.user.photo.key, class:"avatar-large", alt:"avatar-large" %>
       <p><strong>Website:</strong> <%= @offer.website %></p>
       <p><strong>Phone number:</strong> <%= @offer.phone %></p>
       <p><strong>What do we provide?</strong> <%= @offer.description %></p>
       <p><strong>People that trusted us: </strong> <%= @offer.upvotes %></p>
-     <%= link_to "Contact us",  offer_chatrooms_path(@offer), data: { turbo_method: :post}, class: "btn-outline-success btn-outline-success card_button" %>
+     <%= link_to "Contact us",  offer_chatrooms_path(@offer), data: { turbo_method: :post}, class: "btn btn-outline-success card_button" %>
     </div>
   </div>
 </div>

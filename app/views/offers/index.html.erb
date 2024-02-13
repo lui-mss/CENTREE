@@ -11,7 +11,7 @@
         <div class="card-product-infos">
           <!-- User's Offer Page -->
           <h2><%= offer.name %></h2>
-          <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+          <%= cl_image_tag offer.user.photo.key, class:"avatar-large", alt:"avatar-large" %>
           <p><strong>People that trusted us:</strong></p>
           <p class="upvotes"><%= offer.upvotes %></p>
           <%= link_to "More Information", offer_path(offer, country: params[:country], city: params[:city]), class: "btn-outline-success btn-outline-success card_button" %>
