@@ -14,7 +14,7 @@
           <%= cl_image_tag offer.user.photo.key, class:"avatar-large", alt:"avatar-large" %>
           <p><strong>People that trusted us:</strong></p>
           <p class="upvotes"><%= offer.upvotes %></p>
-          <%= link_to "More Information", offer_path(offer, country: params[:country], city: params[:city]), class: "btn-outline-success btn-outline-success card_button" %>
+          <%= link_to "More Information", offer_path(offer, country: params[:country], city: params[:city]), class:"btn btn-outline-success" %>
         </div>
       </div>
     <% end %>
