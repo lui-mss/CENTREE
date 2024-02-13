@@ -1,4 +1,5 @@
 <div class="show-card-container">
+  <%= link_to "Back to Offers", offers_path(category_id: @offer.category.id, country: params[:country], city: params[:city]) %>
   <div class="show-card">
           <!-- Content -->
     <div class="show-card-infos">
