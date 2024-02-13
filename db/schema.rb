@@ -90,6 +90,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_12_131344) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address"
     t.float "latitude"
     t.float "longitude"
     t.index ["category_id"], name: "index_offers_on_category_id"
