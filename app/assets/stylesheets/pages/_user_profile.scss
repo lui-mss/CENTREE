@@ -1,11 +1,14 @@
 .links {
   display: flex;
+  flex-direction: column;
   margin: 30px;
   padding-bottom: 10px;
 }
 
 .user-info {
+  display: inline;
   height: fit-content;
+  width: 300px;
 }
 
 .usercard {
@@ -20,5 +23,11 @@
 
 .cancellation {
   display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
 
+.edit-container {
+  max-width: 90vw;
+  max-height: 90vw;
 }
