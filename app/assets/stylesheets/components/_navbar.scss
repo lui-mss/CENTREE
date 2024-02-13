@@ -11,12 +11,21 @@
   width: 100px;
 }
 
-.navbar{
-.container-fluid{
+.navbar .container-fluid {
   padding: 10px;
 }
+
+.login {
+  font-size: 20px;
 }
 
-.login{
- font-size: 20px;
+.navbar-links-container {
+  display: flex;
+  align-content: center;
+}
+
+.nav-link {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
 }
