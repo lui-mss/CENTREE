@@ -8,24 +8,6 @@
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-6">
-              <%= form_with url: categories_path, method: :get do %>
-                  <div class="country-dropdown search-inputs d-flex">
-                      <select id="country" name="country" class="form-select">
-                          <option value="" selected disabled>Select destination</option>
-                          <option value="Germany">Germany</option>
-                          <option value="Italy">Italy</option>
-                          <option value="France">France</option>
-                          <option value="Spain">Spain</option>
-                          <option value="Portugal">Albania</option>
-                          <option value="Greece">Greece</option>
-                          <option value="Netherlands">Netherlands</option>
-                          <option value="Sweden">Sweden</option>
-                      </select>
-                      <%= button_tag(type: 'submit', class: 'btn btn-outline-success', style: "margin-left: 15px;") do %>
-                          <span><i class="fas fa-search"></i></span>
-                      <% end %>
-                  </div>
-              <% end %>
           </div>
       </div>
   </div>
@@ -46,9 +28,24 @@
       <% end %>
     </div>
 
-    <div class="categories-container">
-    </div>
-  </div>
+    <%= form_with url: categories_path, method: :get, class: "map-search d-flex justify-content-end" do %>
+      <div class="country-dropdown search-inputs d-flex">
+        <select id="country" name="country" class="form-select">
+          <option value="" selected disabled>Select destination</option>
+            <option value="Germany">Germany</option>
+            <option value="Italy">Italy</option>
+            <option value="France">France</option>
+            <option value="Spain">Spain</option>
+            <option value="Albania">Albania</option>
+            <option value="Greece">Greece</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Sweden">Sweden</option>
+          </select>
+          <%= button_tag(type: 'submit', class: 'btn btn-outline-success') do %>
+            <span><i class="fas fa-search"></i></span>
+          <% end %>
+      </div>
+    <% end %>
 
   <div id="after-refresh-map" class="map" style="width: 100%; height: 600px;"
     data-controller="map"

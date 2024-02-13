@@ -1,3 +1,4 @@
+require "open-uri"
 # This file should ensure the existence of records required to run the application in every environment (production,
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
@@ -14,33 +15,102 @@ Category.destroy_all
 User.destroy_all
 
 
-marco = User.create!(email: "marco@jail.com", password: 654321, nickname: "MarcoTu", first_name: "Marco", last_name: "T", language: "italian, english", contributor: false)
-yolanda = User.create!(email: "yolanda@jail.com", password: 654321, nickname: "Yoyolandada", first_name: "Yolanda", last_name: "M", language: "spanish, english", contributor: false)
-luisa = User.create!(email: "luisa@jail.com", password: 654321, nickname: "luimss", first_name: "Luisa", last_name: "S", language: "portuguese, english", contributor: false)
-stamatis = User.create!(email: "stamatis@jail.com", password: 654321, nickname: "Stam", first_name: "Stamatis", last_name: "V", language: "greek, english", contributor: false)
+marco = User.new(email: "marco@jail.com", password: 654321, nickname: "MarcoTu", first_name: "Marco", last_name: "T", language: "italian, english", contributor: false)
+file_marco = URI.open("https://ca.slack-edge.com/T02NE0241-U068PD3FSQY-6c0a11d58d37-512")
+marco.photo.attach(io: file_marco, filename: "nes.png", content_type: "image/png")
+marco.save
+
+yolanda = User.new(email: "yolanda@jail.com", password: 654321, nickname: "Yoyolandada", first_name: "Yolanda", last_name: "M", language: "spanish, english", contributor: false)
+file_yolanda = URI.open("https://ca.slack-edge.com/T02NE0241-U067SHG69UK-77aa066498fa-512")
+yolanda.photo.attach(io: file_yolanda, filename: "nes.png", content_type: "image/png")
+yolanda.save
+
+luisa = User.new(email: "luisa@jail.com", password: 654321, nickname: "luimss", first_name: "Luisa", last_name: "S", language: "portuguese, english", contributor: false)
+file_luisa = URI.open("https://ca.slack-edge.com/T02NE0241-U06947DAH08-371b15d9fa95-512")
+luisa.photo.attach(io: file_luisa, filename: "nes.png", content_type: "image/png")
+luisa.save
+
+stamatis = User.new(email: "stamatis@jail.com", password: 654321, nickname: "Stam", first_name: "Stamatis", last_name: "V", language: "greek, english", contributor: false)
+file_stamatis = URI.open("https://ca.slack-edge.com/T02NE0241-U068ERW0M6D-af31026e9d6d-512")
+stamatis.photo.attach(io: file_stamatis, filename: "nes.png", content_type: "image/png")
+stamatis.save
 
 puts "Migrant Users seeds created"
 
-pedro = User.create!(email: "pedro@jail.com", password: 654321, nickname: "pedro_bm", first_name: "Pedro", last_name: "BM", language: "portuguese, english", contributor: true)
-grazia = User.create!(email: "grazia@jail.com", password: 654321, nickname: "grazia_c", first_name: "Grazia", last_name: "C", language: "italian, english", contributor: true)
-lucia = User.create!(email: "lucia@jail.com", password: 654321, nickname: "lucia_h", first_name: "Lucia", last_name: "H", language: "spanish, english",  contributor: true)
+pedro = User.new(email: "pedro@jail.com", password: 654321, nickname: "pedro_bm", first_name: "Pedro", last_name: "BM", language: "portuguese, english", contributor: true)
+file_pedro = URI.open("https://ca.slack-edge.com/T02NE0241-US7288YNP-adabe5cee822-512")
+pedro.photo.attach(io: file_pedro, filename: "nes.png", content_type: "image/png")
+pedro.save
 
-dareos = User.create!(email: "dareos@jail.com", password: 654321, nickname: "dareos_h", first_name: "Dareos", last_name: "H", language: "greek, english", contributor: true)
-jess = User.create!(email: "jess@jail.com", password: 654321, nickname: "jess_sc", first_name: "Jess", last_name: "SC", language: "portuguese, english", contributor: true)
-dari = User.create!(email: "dari@jail.com", password: 654321, nickname: "dari_g", first_name: "Dari", last_name: "G", language: "english", contributor: true)
+grazia = User.new(email: "grazia@jail.com", password: 654321, nickname: "grazia_c", first_name: "Grazia", last_name: "C", language: "italian, english", contributor: true)
+file_grazia = URI.open("https://ca.slack-edge.com/T02NE0241-U03BK5AMA86-ac39ec609d82-512")
+grazia.photo.attach(io: file_grazia, filename: "nes.png", content_type: "image/png")
+grazia.save
 
-arbi = User.create!(email: "arbi@jail.com", password: 654321, nickname: "arbi_v", first_name: "Arbi", last_name: "V", language: "italian, english", contributor: true)
-alex = User.create!(email: "alex@jail.com", password: 654321, nickname: "alex_d", first_name: "Alex", last_name: "D", language: "english", contributor: true)
-andre = User.create!(email: "andre@jail.com", password: 654321, nickname: "andre_m", first_name: "Andre", last_name: "M", language: "portuguese, english", contributor: true)
+lucia = User.new(email: "lucia@jail.com", password: 654321, nickname: "lucia_h", first_name: "Lucia", last_name: "H", language: "spanish, english",  contributor: true)
+file_lucia = URI.open("https://ca.slack-edge.com/T02NE0241-U02GF9LEYFL-b383a4af4854-512")
+lucia.photo.attach(io: file_lucia, filename: "nes.png", content_type: "image/png")
+lucia.save
 
-will = User.create!(email: "will@jail.com", password: 654321, nickname: "will_d", first_name: "Will", last_name: "D", language: "italian, english", contributor: true)
-david = User.create!(email: "david@jail.com", password: 654321, nickname: "david_C", first_name: "David", last_name: "C", language: "italian, english", contributor: true)
-luca = User.create!(email: "luca@jail.com", password: 654321, nickname: "luca_s", first_name: "Luca", last_name: "S", language: "portuguese, english", contributor: true)
+dareos = User.new(email: "dareos@jail.com", password: 654321, nickname: "dareos_h", first_name: "Dareos", last_name: "H", language: "greek, english", contributor: true)
+file_dareos = URI.open("https://ca.slack-edge.com/T02NE0241-U0113CLED54-91628ee16c30-512")
+dareos.photo.attach(io: file_dareos, filename: "nes.png", content_type: "image/png")
+dareos.save
 
-anja = User.create!(email: "anja@jail.com", password: 654321, nickname: "anja_s", first_name: "Anja", last_name: "S", language: "english", contributor: true)
-paulyn = User.create!(email: "paulyn@jail.com", password: 654321, nickname: "paulyn_o", first_name: "Paulyn", last_name: "O", language: "english", contributor: true)
-christian = User.create!(email: "cristian@jail.com", password: 654321, nickname: "christian_b_y", first_name: "Christian", last_name: "BY", language: "french, english", contributor: true)
+jess = User.new(email: "jess@jail.com", password: 654321, nickname: "jess_sc", first_name: "Jess", last_name: "SC", language: "portuguese, english", contributor: true)
+file_jess = URI.open("https://ca.slack-edge.com/T02NE0241-U01C4FMDDC4-ae3730d008f4-512")
+jess.photo.attach(io: file_jess, filename: "nes.png", content_type: "image/png")
+jess.save
 
+dari = User.new(email: "dari@jail.com", password: 654321, nickname: "dari_g", first_name: "Dari", last_name: "G", language: "english", contributor: true)
+file_dari = URI.open("https://ca.slack-edge.com/T02NE0241-U03PH9SN7TQ-6a1eb994dc73-512")
+dari.photo.attach(io: file_dari, filename: "nes.png", content_type: "image/png")
+dari.save
+
+arbi = User.new(email: "arbi@jail.com", password: 654321, nickname: "arbi_v", first_name: "Arbi", last_name: "V", language: "italian, english", contributor: true)
+file_arbi = URI.open("https://ca.slack-edge.com/T02NE0241-U56PHGY1Z-14661014b251-512")
+arbi.photo.attach(io: file_arbi, filename: "nes.png", content_type: "image/png")
+arbi.save
+
+alex = User.new(email: "alex@jail.com", password: 654321, nickname: "alex_d", first_name: "Alex", last_name: "D", language: "english", contributor: true)
+file_alex = URI.open("https://ca.slack-edge.com/T02NE0241-UBGQCG2JD-222a98c74f2b-512")
+alex.photo.attach(io: file_alex, filename: "nes.png", content_type: "image/png")
+alex.save
+
+andre = User.new(email: "andre@jail.com", password: 654321, nickname: "andre_m", first_name: "Andre", last_name: "M", language: "portuguese, english", contributor: true)
+file_andre = URI.open("https://ca.slack-edge.com/T02NE0241-U01U4S92NJ1-346b46af5faf-512")
+andre.photo.attach(io: file_andre, filename: "nes.png", content_type: "image/png")
+andre.save
+
+will = User.new(email: "will@jail.com", password: 654321, nickname: "will_d", first_name: "Will", last_name: "D", language: "italian, english", contributor: true)
+file_will = URI.open("https://ca.slack-edge.com/T02NE0241-U03PK6BT5BP-50d644f31b6d-512")
+will.photo.attach(io: file_will, filename: "nes.png", content_type: "image/png")
+will.save
+
+david = User.new(email: "david@jail.com", password: 654321, nickname: "david_C", first_name: "David", last_name: "C", language: "italian, english", contributor: true)
+file_david = URI.open("https://ca.slack-edge.com/T02NE0241-U01439WBLBA-03c468fd4087-512")
+david.photo.attach(io: file_david, filename: "nes.png", content_type: "image/png")
+david.save
+
+luca = User.new(email: "luca@jail.com", password: 654321, nickname: "luca_s", first_name: "Luca", last_name: "S", language: "portuguese, english", contributor: true)
+file_luca = URI.open("https://ca.slack-edge.com/T02NE0241-U01U249Q3DH-fb1d15ae116b-512")
+luca.photo.attach(io: file_luca, filename: "nes.png", content_type: "image/png")
+luca.save
+
+anja = User.new(email: "anja@jail.com", password: 654321, nickname: "anja_s", first_name: "Anja", last_name: "S", language: "english", contributor: true)
+file_anja = URI.open("https://ca.slack-edge.com/T02NE0241-U02T9MAGQUC-e31450bc5c4b-512")
+anja.photo.attach(io: file_anja, filename: "nes.png", content_type: "image/png")
+anja.save
+
+paulyn = User.new(email: "paulyn@jail.com", password: 654321, nickname: "paulyn_o", first_name: "Paulyn", last_name: "O", language: "english", contributor: true)
+file_paulyn = URI.open("https://ca.slack-edge.com/T02NE0241-U04LHR36XM1-0c4ad4ef9aa3-512")
+paulyn.photo.attach(io: file_paulyn, filename: "nes.png", content_type: "image/png")
+paulyn.save
+
+christian = User.new(email: "cristian@jail.com", password: 654321, nickname: "christian_b_y", first_name: "Christian", last_name: "BY", language: "french, english", contributor: true)
+file_christian = URI.open("https://ca.slack-edge.com/T02NE0241-U02E7GDQ3A8-7216f1981495-512")
+christian.photo.attach(io: file_christian, filename: "nes.png", content_type: "image/png")
+christian.save
 
 puts "Lawyer Users seeds created"
 

@@ -1,15 +1,14 @@
-<div class="container">
-
-  <div class="d-inline-flex usercard">
+<div class="container edit-container">
+  <div class="flex usercard">
     <div class="user-info category text-start">
-      <%= image_tag "https://media.istockphoto.com/id/1324786380/photo/young-handsome-smiling-man-in-brown-shirt-and-glasses-feeling-confident-isolated-on-gray.jpg?s=612x612&w=0&k=20&c=EWqUQzPW-4jH8rri6eQAeomVfeizC2ead7YCl28KhXU=", class: "avatar" %>
+      <%= cl_image_tag current_user.photo.key, class: "avatar" %>
       <h2><%= @user.first_name %></h2>
       <p>Surname: <%= @user.last_name %></p>
       <p>Username: <%= @user.nickname %></p>
       <p>Email: <%= @user.email %></p>
       <p>Languages: <%= @user.language.capitalize %></p>
          <div class="change-password" data-controller="edit-user">
-        <h4 data-action="click->edit-user#show">Edit <%= resource_name.to_s.humanize %></h4>
+        <h6 class="btn btn-outline-success" data-action="click->edit-user#show">Edit <%= resource_name.to_s.humanize %></h6>
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :class=>"d-none",  data: { edit_user_target: "formHidden"} }) do |f| %>
           <%= f.error_notification %>
@@ -35,13 +34,13 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Update" %>
+            <%= f.button :submit, "Update", class: "btn btn-outline-success" %>
           </div>
         <% end %>
       </div>
     </div>
 
-    <div class="links flex-column">
+    <div class="links col-9: width of 75%">
       <div class="messages-link">
         <h4><%=link_to "Your Messages", chatrooms_path %></h4>
       </div>
@@ -50,13 +49,10 @@
         <h4><%=link_to "e-Storage", chatrooms_path %></h4>
       </div>
 
-      <div class="cancellation">
-        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, :class=>"btn btn-outline-success" %>
-          <%= link_to "Back", :back %>
-      </div>
+
     </div>
-
-
   </div>
-
+  <div class="cancellation">
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn btn-outline-success" %>
+  </div>
 </div>
