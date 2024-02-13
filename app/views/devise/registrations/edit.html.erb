@@ -2,7 +2,7 @@
 
   <div class="d-inline-flex usercard">
     <div class="user-info category text-start">
-      <%= image_tag "https://media.istockphoto.com/id/1324786380/photo/young-handsome-smiling-man-in-brown-shirt-and-glasses-feeling-confident-isolated-on-gray.jpg?s=612x612&w=0&k=20&c=EWqUQzPW-4jH8rri6eQAeomVfeizC2ead7YCl28KhXU=", class: "avatar" %>
+      <%= cl_image_tag current_user.photo.key, class: "avatar" %>
       <h2><%= @user.first_name %></h2>
       <p>Surname: <%= @user.last_name %></p>
       <p>Username: <%= @user.nickname %></p>
