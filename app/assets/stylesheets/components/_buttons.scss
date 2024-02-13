@@ -1,4 +1,4 @@
-.btn btn-outline-success {
+.btn.btn-outline-success {
   padding: 10px 20px;
   font-size: 1rem;
   border: 1px solid #AAB2FF;
@@ -9,6 +9,6 @@
   transition: background-color 0.3s ease;
 }
 
-.btn-outline-success:hover {
-  background-color: #AAB2FF;
+.btn.btn-outline-success:hover {
+  background-color: #96a0f9;
 }

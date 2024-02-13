@@ -35,7 +35,7 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Update" %>
+            <%= f.button :submit, "Update", class: "btn btn-outline-success" %>
           </div>
         <% end %>
       </div>
@@ -51,7 +51,7 @@
       </div>
 
       <div class="cancellation">
-        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, :class=n-outline-success" %>
+        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn btn-outline-success" %>
       </div>
     </div>
 
