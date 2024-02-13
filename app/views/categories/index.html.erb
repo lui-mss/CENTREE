@@ -3,6 +3,7 @@
 <%# display city and shit %>
 
   <div class="container">
+    <%= link_to "Back to Homepage", root_path %>
     <div class="row justify-content-center">
       <div class="col-md-6">
         <%= form_with url: categories_path(country: params[:country]), method: :get do %>

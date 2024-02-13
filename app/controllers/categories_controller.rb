@@ -12,9 +12,13 @@ class CategoriesController < ApplicationController
     ]
     if params[:country].present?
       @cities = Offer.where(country: params[:country]).distinct.pluck(:city)
-      #@categories = Category.joins(:offers).where(offers: { country: params[:country] }) #This takes away categories that do not have the selected city.
+      @categories = Category.joins(:offers).where(offers: { country: params[:country] }) #This takes away categories that do not have the selected city.
     else
       @cities = Offer.all.distinct.pluck(:city)
+    end
+
+    if params[:city].present?
+      @categories = Category.joins(:offers).where(offers: { city: params[:city] }) #This takes away categories that do not have the selected city.
     end
   end
 end
