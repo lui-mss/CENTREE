@@ -1,8 +1,8 @@
-<div class="container edit-container">
+<div class="container">
   <h1>Resources</h1>
 <%# display city and shit %>
-
-  <div class="container">
+  <div class="margins">
+    <div class="container">
     <%= link_to "Back to Homepage", root_path %>
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -24,20 +24,22 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row justify-content-center">
-      <%= params[:city] %>
+    <div class="container">
+      <div class="row justify-content-center">
+        <%= params[:city] %>
+      </div>
+    </div>
+
+    <div class="categories">
+      <% @categories.each_with_index do |category, index| %>
+        <div class="category clickable" >
+          <%= link_to offers_path(category_id: category.id, country: params[:country], city: params[:city]), class:"link-style" do %>
+            <h4><%= category.name.upcase %></h4>
+            <p><%= @icons[index].html_safe %></p>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 
-  <div class="categories">
-    <% @categories.each_with_index do |category, index| %>
-      <div class="category clickable" >
-        <%= link_to offers_path(category_id: category.id, country: params[:country], city: params[:city]), class:"link-style" do %>
-          <h4><%= category.name.upcase %></h4>
-          <p><%= @icons[index].html_safe %></p>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
 </div>

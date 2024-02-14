@@ -70,3 +70,9 @@ h1 {
 .selected-city {
   display: flex;
 }
+
+.margins {
+  border-left: 2px solid $light-grey;
+  border-right: 2px solid $light-grey;
+  padding-block: 10px;
+}
