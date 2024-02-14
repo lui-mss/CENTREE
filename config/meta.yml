@@ -6,8 +6,8 @@ meta_title: "Centree – Centralizing information and providing safety"
 
 meta_description: "A beacon of hope and guidance for migrants journeying towards a new beginning in Europe"
 
-meta_image: "migration.png" # should exist in `app/assets/images/`
+meta_image: "hero.png" # should exist in `app/assets/images/`
 
 twitter_account: "@product_twitter_account" # required for Twitter Cards
 
-og:image: "migration.png"
+og:image: "hero.png"
