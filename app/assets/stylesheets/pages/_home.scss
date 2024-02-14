@@ -18,20 +18,13 @@
 
 .image-caption {
   position: absolute;
-  bottom: 15%;
-  left: 30%;
+  bottom: 10%;
+  left: 28%;
   transform: translateX(-50%);
   background-color: rgba(102, 102, 102, 0.574);
   color: #fff;
   border-radius: 5px;
 }
-
-// p {
-//   font-size: 1.2rem;
-//   color: #666;
-//   text-align: center;
-//   margin-bottom: 30px;
-// }
 
 .country-dropdown {
   margin-bottom: 30px;
@@ -76,21 +69,6 @@
 .deg225 { transform: rotate(231deg) translate(11em) rotate(-225deg); }
 .deg315 { transform: rotate(293deg) translate(9em) rotate(-315deg); }
 
-// .logo-container {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 200px;
-//   height: 200px;
-//   border-radius: 50%;
-//   background-color: #f0f0f0;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   z-index: 1;
-// }
-
 .tree-logo {
   display: block;
   position: absolute;
@@ -98,19 +76,6 @@
   width: 4em; height: 4em;
   margin: -2.25em;
 }
-
-// .categories-container {
-//   display: block;
-//   position: absolute;
-//   top: 50%; left: 50%;
-//   width: 4em; height: 4em;
-//   margin: -2em;
-// }
-
-// .category-link {
-//   text-decoration: none;
-//   color: inherit;
-// }
 
 .category-card {
   width: 100px;
