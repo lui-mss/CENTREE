@@ -13,7 +13,7 @@
 
 .usercard {
   display: flex;
-
+  min-height: inherit;
 }
 
 .btn-outline-success {
@@ -27,7 +27,15 @@
   justify-content: flex-end;
 }
 
-.edit-container {
+.btn-inverted {
+  margin-top: auto;
+  margin-bottom: 0px;
+}
+
+.edit-container-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 90vw;
-  max-height: 90vw;
+  min-height: 100%;
 }
