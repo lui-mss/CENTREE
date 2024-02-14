@@ -13,7 +13,7 @@
 
 .usercard {
   display: flex;
-
+  min-height: inherit;
 }
 
 .btn-outline-success {
@@ -27,3 +27,13 @@
   justify-content: flex-end;
 }
 
+.btn-inverted {
+  margin-top: auto;
+  margin-bottom: 0px;
+}
+
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
