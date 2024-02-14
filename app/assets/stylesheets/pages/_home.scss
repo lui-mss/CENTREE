@@ -61,32 +61,33 @@
   width: 4em; height: 4em;
   margin: -2.25em;
 }
-.circle-container img { display: block; width: 100%; }
-.deg0 { transform: translate(10em); } /* 12em = half the width of the wrapper */
-.deg45 { transform: rotate(60deg) translate(9em) rotate(-45deg); }
-.deg135 { transform: rotate(128deg) translate(11em) rotate(-135deg); }
+.circle-container img { display: block; width: 120px; }
+.deg0 { transform: translate(9em); } /* 12em = half the width of the wrapper */
+.deg45 { transform: rotate(60deg) translate(9em) rotate(299deg); }
+.deg135 { transform: rotate(126deg) translate(10em) rotate(234deg); }
 .deg180 { transform: translate(-11em); }
-.deg225 { transform: rotate(231deg) translate(11em) rotate(-225deg); }
-.deg315 { transform: rotate(293deg) translate(9em) rotate(-315deg); }
+.deg225 { transform: rotate(231deg) translate(10em) rotate(129deg); }
+.deg315 { transform: rotate(293deg) translate(9em) rotate(67deg); }
 
 .tree-logo {
   display: block;
   position: absolute;
-  top: 50%; left: 50%;
-  width: 4em; height: 4em;
-  margin: -2.25em;
+  top: 50%; left: 15%;
+  width: 6em; height: 6em;
+  margin: -2.4em;
 }
 
 .category-card {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #e0e0e0;
+  background-color: #edecec;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.156);
 }
 
 .category-card h4 {
