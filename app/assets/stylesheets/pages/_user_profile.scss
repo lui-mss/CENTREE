@@ -32,8 +32,10 @@
   margin-bottom: 0px;
 }
 
-.edit-container {
+.edit-container-profile {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 90vw;
+  min-height: 100%;
 }
