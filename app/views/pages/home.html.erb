@@ -1,8 +1,11 @@
 <div class="container-fluid">
 
   <div class="image-container">
-    <%= image_tag("migration4.png") %>
-    <h3 class="image-caption">Offering equality through information.</h3>
+    <%= image_tag("homepage3.png") %>
+    <div class="image-caption">
+      <h3>Tailor your search according to your story.</h3>
+      <h6>Select your destination or choose one of the available categories. This is your first step.</h6>
+    </div>
   </div>
 
   <div class="container">
@@ -12,11 +15,10 @@
       </div>
   </div>
 
-
-
+  <div class="map-container">
     <div class='circle-container'>
-      <a href='#' class='center'><%= image_tag("logo2.png", class: "logo") %></a>
-      <a><% classes = ["deg0","deg72","deg144", "deg216", "deg288"] %></a>
+      <a href='#' class='center'><%= image_tag("tree.png", class: "tree-logo") %></a>
+      <a><% classes = ["deg0","deg45","deg135", "deg180", "deg225", "deg315"] %></a>
 
       <% @categories.each_with_index do |category, index| %>
         <a href="<%= root_path(category_id: category.id, anchor: "after-refresh-map") %>" class="category-link <%= classes[index]%>">
@@ -26,30 +28,38 @@
           </div>
         </a>
       <% end %>
+      <a href='<%= root_path(anchor: "after-refresh-map") %>' class='category-link deg315'>
+        <div class="category-card">
+          <h4><%= "ALL RESOURCES" %></h4>
+        </div>
+      </a>
     </div>
 
-    <%= form_with url: categories_path, method: :get, class: "map-search d-flex justify-content-end" do %>
-      <div class="country-dropdown search-inputs d-flex">
-        <select id="country" name="country" class="form-select">
-          <option value="" selected disabled>Select destination</option>
-            <option value="Germany">Germany</option>
-            <option value="Italy">Italy</option>
-            <option value="France">France</option>
-            <option value="Spain">Spain</option>
-            <option value="Albania">Albania</option>
-            <option value="Greece">Greece</option>
-            <option value="Netherlands">Netherlands</option>
-            <option value="Sweden">Sweden</option>
-          </select>
-          <%= button_tag(type: 'submit', class: 'btn btn-outline-success') do %>
-            <span><i class="fas fa-search"></i></span>
-          <% end %>
-      </div>
-    <% end %>
+    <div class="interactive-map">
+      <%= form_with url: categories_path, method: :get, class: "map-search d-flex justify-content-end" do %>
+        <div class="country-dropdown search-inputs d-flex">
+          <select id="country" name="country" class="form-select">
+            <option value="" selected disabled>Select destination</option>
+              <option value="Germany">Germany</option>
+              <option value="Italy">Italy</option>
+              <option value="France">France</option>
+              <option value="Spain">Spain</option>
+              <option value="Albania">Albania</option>
+              <option value="Greece">Greece</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Sweden">Sweden</option>
+            </select>
+            <%= button_tag(type: 'submit', class: 'btn btn-outline-success') do %>
+              <span><i class="fas fa-search"></i></span>
+            <% end %>
+        </div>
+      <% end %>
 
-  <div id="after-refresh-map" class="map" style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      <div id="after-refresh-map" class="map" style="width: 100%; height: 600px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
   </div>
 </div>
