@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/about_us', to: "pages#about_us"
   # get 'offers/index'
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

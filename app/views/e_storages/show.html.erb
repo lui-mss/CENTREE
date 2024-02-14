@@ -1,8 +1,10 @@
-<h2><%= @e_storage.name %></h2>
-<p><strong>Description:</strong> <%= @e_storage.description %></p>
+<div class="container">
+  <h2><%= @e_storage.name %></h2>
+  <p><strong>Description:</strong> <%= @e_storage.description %></p>
 
-<% @e_storage.files.each do |file| %>
-<%= link_to file.filename, cloudinary_url(file.key), target: "_blank" %>
-<% end %>
+  <% @e_storage.files.each do |file| %>
+     <%= link_to file.filename, cloudinary_url(file.key), target: "_blank" %>
+  <% end %>
 
-<%= link_to 'Back to e-Storage', e_storages_path %>
+  <%= link_to 'Back to e-Storage', e_storages_path %>
+</div>

@@ -6,14 +6,18 @@
 }
 
 .user-info {
-  display: inline;
+  display: flex;
   height: fit-content;
-  width: 300px;
+  flex-direction: row;
+  width: 500px;
 }
 
 .usercard {
   display: flex;
-
+  min-height: inherit;
+  background-color: #f8f9fa;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .btn-outline-success {
@@ -21,13 +25,28 @@
   width: fit-content;
 }
 
-.cancellation {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+.btn-inverted {
+  margin-top: auto;
+  margin-bottom: 0px;
 }
 
-.edit-container {
-  max-width: 90vw;
-  max-height: 90vw;
+// .edit-container-profile {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   max-width: 90vw;
+//   min-height: 100%;
+// }
+
+.avatar-side {
+  max-height: 100%;
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+.edit-cancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 20px;
 }

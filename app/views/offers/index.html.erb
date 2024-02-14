@@ -1,5 +1,5 @@
 <div class="container">
-  <%= link_to "Back to Categories", categories_path(country: params[:country]) %>
+  <%= link_to "Back to Categories", categories_path(country: params[:country], city: params[:city]) %>
 
   <h1><%= @category.name %><h1>
   <div class="card-product-container flex-container">

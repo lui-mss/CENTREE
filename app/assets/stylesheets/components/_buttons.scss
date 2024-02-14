@@ -1,14 +1,30 @@
 .btn.btn-outline-success {
   padding: 10px 20px;
   font-size: 1rem;
-  border: 1px solid #AAB2FF;
+  border: 1px solid #26B29D;
   border-radius: 5px;
-  background-color: #AAB2FF;
+  background-color: #26B29D;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn.btn-outline-success:hover {
-  background-color: #96a0f9;
+  background-color: #179986;
+}
+
+.btn-inverted {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #26B29D;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #26B29D;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-inverted:hover {
+  background-color: #26B29D;
+  color: #fff;
 }
