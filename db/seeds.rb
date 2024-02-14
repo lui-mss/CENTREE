@@ -30,7 +30,7 @@ file_luisa = URI.open("https://ca.slack-edge.com/T02NE0241-U06947DAH08-371b15d9f
 luisa.photo.attach(io: file_luisa, filename: "nes.png", content_type: "image/png")
 luisa.save
 
-stamatis = User.new(email: "stamatis@jail.com", password: 654321, nickname: "Stam", first_name: "Stamatis", last_name: "V", language: "greek, english", contributor: false)
+stamatis = User.new(email: "stamatis@jail.com", password: 654321, nickname: "Stam", first_name: "Stamatis", last_name: "V", language: "", contributor: false)
 file_stamatis = URI.open("https://ca.slack-edge.com/T02NE0241-U068ERW0M6D-af31026e9d6d-512")
 stamatis.photo.attach(io: file_stamatis, filename: "nes.png", content_type: "image/png")
 stamatis.save
@@ -125,7 +125,7 @@ employment = Category.create!(name: "Employment")
 puts "Category seeds created"
 
 
-pedro_law = Offer.create!(user: pedro, category: legal_counsel, name: "Global Gateway Legal Group", phone: "999-999-9999", website: "gglg.legal", upvotes: (10..100).to_a.sample, country: "Germany", city: "Munich", description: "As leaders in immigration law, we assist individuals and businesses in navigating the complexities of global mobility. A team of immigration experts specializes in securing visas, work permits, and residency for clients across borders.")
+pedro_law = Offer.create!(user: pedro, category: legal_counsel, name: "Global Gateway Legal Group", phone: "999-999-9999", website: "gglg.legal", upvotes: (10..100).to_a.sample, country: "Netherlands", city: "Amsterdam", description: "As leaders in immigration law, we assist individuals and businesses in navigating the complexities of global mobility. A team of immigration experts specializes in securing visas, work permits, and residency for clients across borders.")
 grazia_law = Offer.create!(user: grazia, category: legal_counsel, name: "Pathfinder Immigration Law", phone: "888-888-8888", website: "pil.legal", upvotes: (10..100).to_a.sample, country: "Italy", city: "Milan", description: "With a focus on cross-border mobility, we excel in providing tailored immigration solutions. Our attorneys leverage extensive knowledge of international law to facilitate smooth transitions for individuals seeking to relocate for work or personal reasons.")
 lucia_law = Offer.create!(user: lucia, category: legal_counsel, name: "CrossBorders Law Associates", phone: "777-777-7777", website: "cla.legal", upvotes: (10..100).to_a.sample, country: "Spain", city: "Barcelona", description: "We stand out for our expertise in asylum and refugee law. Committed to protecting the rights of those seeking refuge, our dedicated team guides clients through the intricate processes of asylum applications and humanitarian visas.")
 puts "Legal Counsel offers seeds created"
