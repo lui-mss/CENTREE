@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Resources</h1>
+  <h1><%= params[:city].present? ? params[:city] : "Resources" %></h1>
 <%# display city and shit %>
   <div class="margins">
     <div class="container">
@@ -24,18 +24,13 @@
     </div>
   </div>
 
-    <div class="container">
-      <div class="row justify-content-center">
-        <%= params[:city] %>
-      </div>
-    </div>
 
     <div class="categories">
       <% @categories.each_with_index do |category, index| %>
         <div class="category clickable" >
           <%= link_to offers_path(category_id: category.id, country: params[:country], city: params[:city]), class:"link-style" do %>
             <h4><%= category.name.upcase %></h4>
-            <p><%= @icons[index].html_safe %></p>
+            <p><%= @icons[index].html_safe if @icons[index] %></p>
           <% end %>
         </div>
       <% end %>
