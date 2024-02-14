@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  border-radius: 5px;
 
   .chatroom-name-container {
     display: flex;
@@ -23,6 +24,10 @@
     height: 100%;
     overflow: scroll;
     padding: 1rem;
+    border: 1px solid $gray-200;;
+    border-color: $gray-200;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
   #new_message {
@@ -42,4 +47,18 @@
     text-align: start;
   }
 
+}
+
+.single-chat {
+  height: 80px;
+  border-bottom: 1px lightgrey;
+  font-size: 20px;
+  margin-top: 35px;
+}
+
+.chatroom-index-container {
+  border-radius: 5px;
+  padding: 1rem;
+  border: 1px solid $gray-200;;
+  border-color: $gray-200;
 }

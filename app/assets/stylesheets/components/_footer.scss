@@ -4,15 +4,11 @@
   justify-content: space-between;
   align-items: baseline; /*without this the icons are not aligned correctly */
   width: 100%;
-  height: 60px; /* Adjust height as needed */
+  height: 80px; /* Adjust height as needed */
   background-color: #F4F4F4; /* Footer background color */
-  // background-image: url(logo.png);
-  // background-size: 75%;
-  // background-position: center top, center center, center bottom;
-  // background-repeat: no-repeat, repeat-y, no-repeat;
   color: #333; /* Text color */
   text-align: center;
-  line-height: 60px; /* Vertical centering */
+  line-height: 80px; /* Vertical centering */
 }
 
 .page-container {

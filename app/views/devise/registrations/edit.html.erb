@@ -1,5 +1,5 @@
-<div class="container edit-container">
-  <div class="flex usercard">
+<div class="container">
+  <div class="flex usercard ">
     <div class="user-info category text-start">
       <%= cl_image_tag current_user.photo.key, class: "avatar" %>
       <h2><%= @user.first_name %></h2>
@@ -46,13 +46,13 @@
       </div>
 
       <div class="e-storage-link">
-        <h4><%=link_to "e-Storage", chatrooms_path %></h4>
+        <h4><%=link_to "e-Storage", e_storages_path %></h4>
       </div>
 
 
     </div>
   </div>
   <div class="cancellation">
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn btn-outline-success" %>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn-inverted" %>
   </div>
 </div>
