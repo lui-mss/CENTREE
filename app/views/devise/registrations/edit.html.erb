@@ -13,11 +13,13 @@
       </div>
 
       <div class="left">
-        <h2><%= @user.first_name %></h2>
-        <p>Surname: <%= @user.last_name %></p>
-        <p>Username: <%= @user.nickname %></p>
-        <p>Email: <%= @user.email %></p>
-        <p>Languages: <%= @user.language.capitalize %></p>
+        <div>
+          <h2><%= @user.first_name %></h2>
+          <p><strong>Surname:</strong> <%= @user.last_name %></p>
+          <p><strong>Username:</strong <%= @user.nickname %>></p>
+          <p><strong>Email:</strong> <%= @user.email %></p>
+          <p><strong>Languages:</strong> <%= @user.language.capitalize %></p>
+        </div>
 
         <div class="edit-cancel">
           <div class="change-password" data-controller="edit-user">
