@@ -19,11 +19,12 @@
 .image-caption {
   position: absolute;
   bottom: 10%;
-  right: 30%;
-  transform: translateX(-50%);
-  background-color: rgba(102, 102, 102, 0.574);
+  right: 3%;
+  // transform: translateX(-50%);
+  background-color: #26b29d6c;
   color: #fff;
   border-radius: 5px;
+  padding: 15px;
 }
 
 .country-dropdown {
