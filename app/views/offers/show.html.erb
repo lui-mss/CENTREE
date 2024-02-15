@@ -9,7 +9,7 @@
       <p><strong>Website:</strong> <%= @offer.website %></p>
       <p><strong>Phone number:</strong> <%= @offer.phone %></p>
       <p><strong>What do we provide?</strong> <%= @offer.description %></p>
-      <p><strong>People that trusted us: </strong> <%= @offer.upvotes %></p>
+      <p><strong><%= @offer.upvotes %> people trusted us</strong></p>
      <%= link_to "Contact us",  offer_chatrooms_path(@offer), data: { turbo_method: :post}, class: "btn btn-outline-success card_button" %>
     </div>
   </div>
