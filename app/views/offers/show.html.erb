@@ -1,11 +1,11 @@
 <div class="show-card-container">
   <%= link_to "Back to Offers", offers_path(category_id: @offer.category.id, country: params[:country], city: params[:city]) %>
-  <div class="show-card d-flex">
-  <%= cl_image_tag @offer.user.photo.key, class:"avatar-large", alt:"avatar-large" %>
+  <div class="show-card">
           <!-- Content -->
     <div class="show-card-infos">
       <h1><%= @offer.name %><h1>
       <!-- User's Offer Page -->
+      <%= cl_image_tag @offer.user.photo.key, class:"avatar-large", alt:"avatar-large" %>
       <p><strong>Website:</strong> <%= @offer.website %></p>
       <p><strong>Phone number:</strong> <%= @offer.phone %></p>
       <p><strong>What do we provide?</strong> <%= @offer.description %></p>
