@@ -47,7 +47,11 @@
 .edit-cancel {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: start;
   padding-top: 20px;
   width: 400px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
