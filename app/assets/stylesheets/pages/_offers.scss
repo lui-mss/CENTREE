@@ -46,3 +46,19 @@
 .card-product-container {
   flex-wrap: wrap;
 }
+
+.btn.btn-outline-success {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #26B29D;
+  border-radius: 5px;
+  background-color: #26B29D;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-outline-success:hover {
+  background-color: #179986;
+  margin-bottom: 15px;
+}
