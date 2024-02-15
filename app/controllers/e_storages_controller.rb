@@ -16,7 +16,7 @@ class EStoragesController < ApplicationController
   def create
     @e_storage = current_user.e_storages.build(e_storage_params)
     if @e_storage.save
-      redirect_to @e_storage, notice: 'File was successfully uploaded.'
+      redirect_to e_storage_path(@e_storage), notice: 'File was successfully uploaded.'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class EStoragesController < ApplicationController
   def update
     @e_storage = EStorage.find(params[:id])
     if @e_storage.update(e_storage_params)
-      redirect_to @e_storage, notice: 'EStorage was successfully updated.'
+      redirect_to e_storage_path(@e_storage), notice: 'EStorage was successfully updated.'
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class EStoragesController < ApplicationController
   def destroy
     @e_storage = EStorage.find(params[:id])
     @e_storage.destroy
-    redirect_to e_storages_url, notice: 'EStorage was successfully deleted.'
+    redirect_to e_storages_path, notice: 'EStorage was successfully deleted.'
   end
 
   private
